@@ -1,0 +1,1255 @@
+/* -------------------------------------------------------------------------
+   Base & Reset Styles (Keep minimal, rely on Bootstrap)
+------------------------------------------------------------------------- */
+body {
+    font-family: "baskerville-urw", serif; /* Ensure Typekit/Adobe Font is loaded */
+    color: #333; /* Standard dark text */
+    line-height: 1.6;
+    background-color: #FFFFFF; /* Base background */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "adrianna-extended", sans-serif; /* Ensure Typekit/Adobe Font is loaded */
+    font-weight: 600; /* Slightly less heavy */
+    color: #0A1931; /* Navy Blue for headings */
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+a {
+    color: #7B8B9A; /* Steel Blue/Grey for standard links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover, a:focus {
+    color: #0A1931; /* Navy on hover */
+    text-decoration: underline;
+}
+
+/* Primary Button Style */
+.btn-primary {
+    background-color: #C0B08D; /* Muted Champagne/Gold */
+    border-color: #C0B08D;
+    color: #FFFFFF !important; /* Ensure white text */
+    font-family: "adrianna-extended", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding: 10px 25px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #A49171; /* Darker Champagne */
+    border-color: #A49171;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+}
+/* Link Button Style */
+.btn-link {
+    color: #7B8B9A;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-family: "adrianna-extended", sans-serif;
+}
+.btn-link:hover, .btn-link:focus {
+    color: #0A1931;
+    text-decoration: none; /* Remove underline on hover for link buttons */
+}
+.btn-link .fa { margin-left: 5px; font-size: 0.9em;}
+
+
+/* Helper class for adornment */
+.adorn {
+    position: relative;
+    margin-bottom: 1.5em;
+    padding-bottom: 0.75em;
+}
+.adorn::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 1px; /* Thinner line */
+    background-color: #C0B08D; /* Champagne accent color */
+    margin: 0.75em auto 0;
+}
+h1.adorn { font-size: 32px; }
+h2.adorn { font-size: 26px; }
+@media (max-width: 767px) {
+    h1.adorn { font-size: 26px; }
+    h2.adorn { font-size: 22px; }
+}
+
+/* Scroll Anchor Styling (Hidden) */
+.scroll-anchor {
+    display: block;
+    position: relative;
+    top: -80px; /* Adjust offset based on sticky header height */
+    visibility: hidden;
+}
+
+
+/* -------------------------------------------------------------------------
+   Header Styles (#main-header)
+------------------------------------------------------------------------- */
+
+/* Top Bar (#dark-topper) */
+#dark-topper {
+    background-color: #0A1931; /* Navy Blue */
+    color: #E1E5EA; /* Light Silver/Grey text */
+    padding: 8px 0;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+#dark-topper a {
+    color: #FFFFFF; /* White links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block; /* Prevent wrapping issues */
+    vertical-align: middle;
+}
+#dark-topper a:hover {
+    color: #C0B08D; /* Champagne hover */
+    text-decoration: none;
+}
+#dark-topper .fa {
+    margin-right: 5px; /* Increased spacing */
+    font-size: 13px; /* Slightly larger icons */
+    vertical-align: middle;
+    position: relative;
+    top: -1px; /* Fine-tune alignment */
+}
+.top-contact-info {
+    display: flex;
+    align-items: center;
+    height: 30px; /* Ensure consistent height */
+}
+.top-contact-info.text-right {
+    justify-content: flex-end;
+}
+.top-contact-info a, .top-contact-info span {
+    margin: 0 8px; /* Slightly Increased Spacing between items */
+}
+.top-contact-info .accessibility-link {
+    font-style: italic;
+    color: #E1E5EA;
+}
+.booknow-button { /* Specific class for Book Now in top bar */
+    background-color: #C0B08D; /* Champagne */
+    color: #FFFFFF !important; /* Ensure white text */
+    padding: 6px 18px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent;
+    display: inline-block;
+    line-height: 1.5; /* Adjust line-height */
+    margin-left: 15px; /* Space before Book Now */
+}
+.booknow-button:hover {
+    background-color: #A49171; /* Darker Champagne */
+    color: #FFFFFF !important;
+    text-decoration: none;
+}
+
+/* Main Logo/Header Bar (#the-top-fixed-bar) */
+#the-top-fixed-bar {
+    background-color: #FFFFFF;
+    padding: 10px 0;
+    border-bottom: 1px solid #E1E5EA; /* Light silver border */
+    position: relative; /* Keep relative unless fixed */
+    z-index: 1020; /* Below navbar toggle, above content */
+    transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+#logo { text-align: center; } /* Center logo */
+#logo img { transition: all 0.3s ease; }
+#logo img.small-logo {
+    display: none; /* Hidden by default */
+    max-height: 40px; /* Adjust as needed */
+     margin: 5px auto; /* Centered */
+}
+#logo img.full-logo {
+    display: inline-block; /* Use inline-block for centering */
+    margin: 0 auto;
+    max-height: 55px; /* Adjust as needed */
+}
+
+/* Sticky Header Active State */
+#the-top-fixed-bar.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98); /* Slightly transparent white */
+    padding: 5px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1031; /* Above default navbar */
+}
+#the-top-fixed-bar.fixed-header #logo img.small-logo { display: inline-block; }
+#the-top-fixed-bar.fixed-header #logo img.full-logo { display: none; }
+
+/* Placeholder for sticky header */
+#header-placeholder {
+    display: none; /* Hide initially */
+}
+.fixed-header + #header-placeholder {
+    display: block; /* Show only when header is fixed */
+}
+
+
+/* -------------------------------------------------------------------------
+   Navigation Styles
+------------------------------------------------------------------------- */
+/* Desktop Navigation Container */
+.top-new-nav {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E1E5EA;
+}
+.main-nav-container { /* Ensure nav stays within bounds */
+    padding-left: 0;
+    padding-right: 0;
+}
+.navbar-default {
+    background-color: transparent; /* Inherit from parent */
+    border: none;
+    margin-bottom: 0;
+    box-shadow: none;
+}
+/* Center the desktop nav */
+.navbar-default .navbar-nav {
+    float: none;
+    display: table;
+    margin: 0 auto;
+    table-layout: auto; /* Let items size naturally */
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-family: "adrianna-extended", sans-serif;
+    text-transform: uppercase;
+    font-size: 11px; /* Slightly smaller */
+    font-weight: 600;
+    letter-spacing: 1.5px; /* More spacing */
+    color: #0A1931 !important; /* Navy Blue */
+    padding: 20px 18px; /* Adjust padding */
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    line-height: 20px; /* Standard line height */
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #C0B08D !important; /* Champagne on hover */
+    background-color: transparent !important;
+    box-shadow: none; /* Remove potential box-shadow on hover if not active */
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #C0B08D !important; /* Champagne for active/open */
+    background-color: transparent !important;
+    box-shadow: inset 0 -2px 0 #C0B08D; /* Underline indicator */
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+    border-radius: 0;
+    border: 1px solid #E1E5EA;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    background-color: #FFFFFF;
+    padding: 5px 0;
+    margin-top: 0; /* Align with bottom of nav item */
+}
+.dropdown-menu > li > a {
+    font-family: "adrianna-extended", sans-serif;
+    font-size: 11px;
+    color: #555;
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-weight: 400; /* Normal weight for dropdown items */
+    text-transform: none; /* No uppercase */
+    letter-spacing: 0.5px; /* Less spacing */
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: #F8F9FA; /* Very light grey hover */
+    color: #C0B08D; /* Champagne */
+    text-decoration: none;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background-color: #F8F9FA;
+    color: #C0B08D;
+    font-weight: bold; /* Make active dropdown item bold */
+    text-decoration: none;
+}
+.navbar-default .navbar-nav .caret {
+    border-top-color: #7B8B9A;
+    border-bottom-color: #7B8B9A;
+    margin-left: 4px;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #C0B08D;
+    border-bottom-color: #C0B08D;
+}
+
+/* -------------------------------------------------------------------------
+   Mobile Navigation Styles (.navbar-mobile)
+------------------------------------------------------------------------- */
+.navbar-mobile {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E1E5EA;
+}
+/* Mobile Navbar Brand/Logo (if added) */
+/* .navbar-mobile .navbar-brand img {
+    max-height: 35px !important;
+    padding: 0;
+    margin-top: 7px;
+} */
+.navbar-mobile .navbar-toggle {
+    margin-top: 12px; /* Adjust vertical alignment */
+    margin-right: 15px;
+    margin-bottom: 12px;
+    border-color: #DDD; /* Lighter border */
+    padding: 8px 9px;
+    background-color: transparent;
+}
+.navbar-mobile .navbar-toggle .icon-bar {
+    background-color: #0A1931; /* Navy bars */
+    width: 20px; /* Slightly thinner bars */
+    height: 2px;
+}
+.navbar-mobile .navbar-toggle:hover, .navbar-mobile .navbar-toggle:focus {
+     background-color: #F8F9FA;
+     border-color: #C0B08D;
+}
+
+#navbarmobile { /* Collapsible container */
+    border-top: 1px solid #E1E5EA;
+    background-color: #FFFFFF;
+    box-shadow: inset 0 5px 10px -5px rgba(0,0,0,0.05);
+    max-height: calc(100vh - 60px); /* Limit height to viewport minus navbar */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
+.mobile-book-now-container {
+    padding: 15px;
+    background-color: #F8F9FA; /* Light background for contrast */
+    border-bottom: 1px solid #E1E5EA;
+}
+.booknow-button-mobile {
+    /* Uses .btn-primary styles */
+    font-size: 14px;
+    padding: 12px 20px;
+}
+#navbarmobile .nav > li > a {
+    color: #0A1931; /* Navy text */
+    padding: 12px 15px;
+    font-size: 14px;
+    font-family: "adrianna-extended", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #E1E5EA;
+    position: relative; /* For icon positioning */
+    font-weight: 600;
+}
+#navbarmobile .nav > li:last-child > a {
+    border-bottom: none;
+}
+#navbarmobile .nav > li > a:hover,
+#navbarmobile .nav > li > a:focus,
+#navbarmobile .nav > .active > a {
+    color: #C0B08D; /* Champagne */
+    background-color: #F8F9FA; /* Light hover */
+}
+#navbarmobile .nav > li > a .fa { /* Caret/Angle icon */
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7B8B9A;
+    font-size: 1.2em; /* Make angle icon slightly larger */
+}
+#navbarmobile .dropdown-menu {
+    background-color: #F8F9FA; /* Light background for dropdown */
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    border-top: 1px solid #E1E5EA; /* Separator line */
+}
+#navbarmobile .dropdown-menu > li > a {
+    color: #555;
+    padding: 10px 15px 10px 30px; /* Indent submenu items */
+    font-size: 13px;
+    border-bottom: 1px solid #E1E5EA;
+    text-transform: none; /* Normal case for sub-items */
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+#navbarmobile .dropdown-menu > li:last-child > a {
+    border-bottom: none;
+}
+#navbarmobile .dropdown-menu > li > a:hover,
+#navbarmobile .dropdown-menu > li > a:focus,
+#navbarmobile .dropdown-menu > .active > a {
+    color: #C0B08D;
+    background-color: #FFFFFF; /* White hover */
+    font-weight: bold;
+}
+/* Mobile Contact/Social */
+.mobile-contact-info {
+    padding: 20px 15px;
+    background-color: #0A1931; /* Navy background */
+    color: #E1E5EA; /* Light text */
+    text-align: center;
+    font-size: 13px;
+    border-top: 1px solid #4E5D6C; /* Slightly lighter navy border */
+}
+.mobile-contact-info p {
+    margin-bottom: 10px;
+}
+.mobile-contact-info a {
+    color: #FFFFFF; /* White links */
+    text-decoration: none;
+}
+.mobile-contact-info a:hover {
+    color: #C0B08D; /* Champagne hover */
+    text-decoration: underline;
+}
+.mobile-contact-info .accessibility-link {
+    font-style: italic;
+     color: #E1E5EA;
+     display: block; /* Make it full width */
+     margin-top: 10px;
+}
+.mobile-social-icons {
+    margin-top: 15px;
+}
+.mobile-social-icons a {
+    color: #FFFFFF;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+.mobile-social-icons a:hover {
+    color: #C0B08D;
+}
+
+/* -------------------------------------------------------------------------
+   Booking Modal Styles (.booking-modal)
+------------------------------------------------------------------------- */
+.modal-content {
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.modal-header {
+    background-color: #0A1931; /* Navy header */
+    color: #FFFFFF;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    padding: 15px 20px;
+}
+.modal-header .close {
+    color: #FFFFFF;
+    opacity: 0.8;
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: none;
+    transition: opacity 0.3s ease;
+}
+.modal-header .close:hover {
+    opacity: 1;
+}
+.modal-title {
+    font-family: "adrianna-extended", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.modal-body {
+    padding: 25px 30px;
+}
+.the-reservation label { /* Corresponds to .the-reservation in CSS */
+    font-family: "adrianna-extended", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block; /* Ensure label takes full width */
+}
+.booking-section {
+    margin-bottom: 25px;
+}
+/* Date Inputs */
+.date-group .form-control {
+    border-radius: 0; /* Sharp corners */
+    height: 40px;
+    border-color: #CED4DA; /* Standard Bootstrap border */
+    box-shadow: none; /* Remove inner shadow */
+}
+.date-group .form-control:focus {
+    border-color: #C0B08D; /* Highlight color on focus */
+    box-shadow: 0 0 0 0.2rem rgba(192, 176, 141, 0.25); /* Focus ring */
+}
+.date-group .input-group-addon.date-separator {
+    background-color: #F8F9FA;
+    border-color: #CED4DA;
+    border-left: none;
+    border-right: none;
+    color: #7B8B9A;
+}
+.date-group input:first-child { border-radius: 3px 0 0 3px; }
+.date-group input:last-child { border-radius: 0 3px 3px 0; }
+/* Mobile Date Inputs */
+#txtFromDateMO, #txtToDateMO {
+     border-radius: 3px;
+     height: 40px;
+     border-color: #CED4DA;
+     background-color: #fff !important; /* Ensure white background even if readonly */
+     cursor: pointer; /* Indicate it's clickable */
+}
+#txtFromDateMO:focus, #txtToDateMO:focus {
+    border-color: #C0B08D;
+    box-shadow: 0 0 0 0.2rem rgba(192, 176, 141, 0.25);
+}
+/* Guest Selection */
+.guest-dropdown .btn.dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    background-color: #FFFFFF;
+    border: 1px solid #CED4DA;
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: #333;
+    display: flex; /* Use flex for better alignment */
+    justify-content: space-between;
+    align-items: center;
+}
+.guest-dropdown .btn.dropdown-toggle .count-display {
+    font-weight: bold;
+}
+.guest-dropdown .btn.dropdown-toggle .fa {
+    color: #7B8B9A;
+    /* margin-top: 3px; Removed - flex aligns it */
+}
+.guest-dropdown .dropdown-menu {
+    width: 100%;
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid #E1E5EA;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.guest-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.guest-option label {
+    margin-bottom: 0;
+    flex-grow: 1;
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400; /* Normal weight for labels */
+    color: #333;
+}
+.qty-selector {
+    display: flex;
+    align-items: center;
+}
+.qty-selector .minus, .qty-selector .plus {
+    display: inline-flex; /* Use flex for centering icon */
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    /* line-height: 26px; Removed */
+    text-align: center;
+    border: 1px solid #CED4DA;
+    background-color: #F8F9FA;
+    color: #7B8B9A;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.qty-selector .minus:hover, .qty-selector .plus:hover {
+     background-color: #E1E5EA;
+     color: #0A1931;
+}
+.qty-selector input.count {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    background: transparent;
+    margin: 0 5px;
+    /* Hide spinner buttons */
+    -moz-appearance: textfield;
+}
+.qty-selector input.count::-webkit-outer-spin-button,
+.qty-selector input.count::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.guest-apply {
+    text-align: right;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #E1E5EA;
+}
+.guest-apply .btn {
+    font-size: 12px;
+    padding: 6px 15px;
+}
+/* Submit Button */
+.submit-reservation-btn {
+    font-size: 16px;
+    padding: 12px 30px;
+}
+
+/* Datepicker Styles (jQuery UI) */
+.ui-datepicker {
+    background: #fff;
+    border: 1px solid #E1E5EA;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 10px;
+    width: auto; /* Adjust width */
+    z-index: 1051 !important; /* Above modal */
+    border-radius: 4px;
+    font-family: "Raleway", sans-serif; /* Use a fallback font if others fail */
+}
+.ui-datepicker-header {
+    background: #0A1931; /* Navy header */
+    color: #fff;
+    border: none;
+    padding: 8px 0;
+    border-radius: 3px 3px 0 0; /* Match modal header */
+}
+.ui-datepicker-title {
+    font-family: "adrianna-extended", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.8em; /* Ensure vertical space */
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+    color: #fff;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    top: 10px; /* Adjust vertical alignment */
+    width: 1.8em;
+    height: 1.8em;
+}
+.ui-datepicker-prev:hover, .ui-datepicker-next:hover { opacity: 1; }
+.ui-datepicker-prev span, .ui-datepicker-next span {
+    background-image: none !important; /* Remove default icons */
+    font-family: 'FontAwesome';
+    display: block;
+    width: 100%; height: 100%;
+    margin: 0; left: 0; top: 0; /* Reset positioning */
+    line-height: 1.8em; /* Center icon vertically */
+    text-indent: 0;
+    text-align: center;
+    font-size: 12px; /* Adjust icon size */
+}
+.ui-datepicker-prev span::before { content: '\f053'; } /* fa-chevron-left */
+.ui-datepicker-next span::before { content: '\f054'; } /* fa-chevron-right */
+
+.ui-datepicker th {
+    font-family: "adrianna-extended", sans-serif;
+    font-size: 11px;
+    color: #7B8B9A; /* Steel grey */
+    padding: 8px 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.ui-datepicker td { padding: 2px; }
+.ui-datepicker td span, .ui-datepicker td a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.ui-datepicker td a:hover {
+    background-color: #F8F9FA; /* Light hover */
+    border-color: #E1E5EA;
+    color: #0A1931;
+}
+.ui-datepicker .ui-state-disabled span {
+    color: #CCC; /* Lighter color for disabled dates */
+    cursor: default;
+}
+.ui-datepicker-current-day a, .ui-datepicker-current-day span {
+    background-color: #C0B08D; /* Champagne */
+    color: #fff !important;
+    border-color: #A49171; /* Darker border for selected */
+}
+.ui-datepicker-today a, .ui-datepicker-today span {
+    font-weight: bold;
+    color: #0A1931; /* Navy for today */
+    background-color: #E1E5EA; /* Light background highlight for today */
+}
+.ui-datepicker-today a:hover, .ui-datepicker-today span:hover {
+    background-color: #CED4DA; /* Slightly darker hover for today */
+}
+
+/* -------------------------------------------------------------------------
+   Main Content Styles
+------------------------------------------------------------------------- */
+main { background-color: #FFFFFF; }
+
+/* Reset basic jumbotron padding/margin */
+.jumbotron {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.hero-section {
+    position: relative;
+    padding-bottom: 40px; /* Space below image */
+    background: #fff; /* Ensure background is white */
+}
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 30px;
+}
+.page-title.adorn {
+    margin-top: 0;
+}
+
+.intro-section {
+    padding: 40px 0;
+    background-color: #F8F9FA; /* Light background */
+}
+.intro-section .section-heading { /* Targeting h2 here */
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 20px; /* Increased space */
+    font-weight: 700;
+    color: #0A1931;
+}
+.intro-text {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+/* Read More Section */
+#readMoreContent {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px; /* Keep paragraphs left-aligned */
+}
+#readMoreContent p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+#readMoreContent p:last-child {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+.read-more-link {
+    margin-top: 15px;
+    display: inline-block;
+}
+/* CSS handles text toggle based on aria-expanded */
+.read-more-link .text-when-expanded { display: none; }
+.read-more-link .text-when-collapsed { display: inline; }
+.read-more-link[aria-expanded="true"] .text-when-expanded { display: inline; }
+.read-more-link[aria-expanded="true"] .text-when-collapsed { display: none; }
+
+.content-divider {
+    border-top: 1px solid #E1E5EA;
+    margin: 60px auto;
+    width: 80%;
+    max-width: 600px; /* Max width for divider */
+}
+
+.content-section {
+    padding: 60px 0;
+}
+.section-title {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+/* Offers & Activities Grid */
+.offer-grid, .activity-grid {
+    /* Add spacing between rows if needed */
+}
+.offer-item, .activity-item {
+    margin-bottom: 30px;
+    display: flex; /* For equal height boxes */
+    flex-direction: column; /* Ensure items stack correctly */
+}
+.offer-box, .activity-box {
+    border: 1px solid #E1E5EA; /* Light silver border */
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    overflow: hidden; /* Contain image */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack image and content */
+    transition: box-shadow 0.3s ease;
+    height: 100%; /* Make box fill item height */
+}
+.offer-box:hover, .activity-box:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+.offer-image, .activity-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* border-bottom: 1px solid #E1E5EA; Removed, rely on container border */
+}
+.offer-content, .activity-content {
+    padding: 25px;
+    flex-grow: 1; /* Allow content to fill space */
+    display: flex;
+    flex-direction: column;
+}
+.offer-title, .activity-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    min-height: 3em; /* Ensure minimum height (~2 lines) */
+    color: #0A1931; /* Navy */
+}
+.offer-content p, .activity-content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    /* Removed flex-grow from P, manage button spacing differently */
+}
+.offer-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+    padding-left: 5px; /* Adjust bullet position */
+}
+.offer-content ul li {
+    margin-bottom: 5px; /* Space between list items */
+}
+.offer-content p small {
+    font-size: 12px;
+    color: #7B8B9A;
+    display: block; /* Ensure it takes its own line */
+    margin-top: 10px;
+}
+
+/* Button Wrapper - Pushes button to bottom */
+.button-wrap {
+    margin-top: auto; /* Push to bottom */
+    padding-top: 20px; /* Space above button */
+    text-align: center; /* Center button */
+}
+.offer-content .btn, .activity-content .btn {
+    /* Button styles already defined by .btn-primary */
+    display: inline-block;
+    width: auto; /* Let button size naturally */
+    min-width: 160px; /* Ensure minimum width */
+}
+
+
+/* NYC Activities Section */
+.nyc-section {
+    background-color: #F8F9FA; /* Light background */
+}
+
+/* Carousel Styles (Desktop & Mobile) */
+.nyc-carousel, .nyc-carousel-mobile {
+    margin-top: 30px;
+    background: #FFFFFF;
+    border: 1px solid #E1E5EA;
+    border-radius: 4px;
+    padding: 20px; /* Padding around carousel */
+    position: relative; /* Needed for controls */
+}
+.nyc-carousel .carousel-inner .item {
+    /* min-height: 350px; Removed fixed height, let content define */
+    padding: 15px; /* Padding within item */
+}
+.nyc-carousel .carousel-inner .item .row.carousel-row { /* More specific selector */
+    display: flex;
+    align-items: center; /* Vertically align image and text */
+    gap: 30px; /* Space between image and text columns */
+}
+.carousel-image {
+    border-radius: 3px;
+    /* border: 1px solid #E1E5EA; Removed, container has border */
+    display: block; /* Ensure no extra space below image */
+}
+.carousel-caption-col {
+    /* Flex handles width */
+}
+.carousel-caption { /* Common styles */
+    position: static; /* Override Bootstrap */
+    color: #333;
+    text-align: left;
+    padding: 0; /* Reset padding */
+    text-shadow: none;
+}
+.carousel-caption h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0A1931; /* Navy */
+    font-weight: 700;
+}
+.carousel-caption p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #555;
+}
+.carousel-caption p.attribution { /* More specific */
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.carousel-caption p.attribution small {
+    font-size: 11px;
+    color: #7B8B9A; /* Steel grey for attribution */
+    font-style: italic;
+}
+
+/* Carousel Controls */
+.carousel-control {
+    background-image: none !important;
+    opacity: 0.8;
+    width: 40px; /* Smaller controls */
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(10, 25, 49, 0.5); /* Semi-transparent Navy */
+    border-radius: 50%;
+    color: #FFFFFF;
+    line-height: 40px; /* Center icon */
+    font-size: 18px;
+    text-shadow: none;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    border: none;
+    text-align: center;
+}
+.carousel-control .fa {
+    position: relative;
+    top: 1px; /* Fine-tune icon position */
+}
+.carousel-control:hover, .carousel-control:focus {
+    opacity: 1;
+    background-color: rgba(10, 25, 49, 0.8); /* Darker Navy */
+    color: #FFFFFF;
+}
+.carousel-control.left { left: 15px; } /* Adjust position if needed */
+.carousel-control.right { right: 15px; } /* Adjust position if needed */
+
+/* Carousel Indicators */
+.carousel-indicators {
+    bottom: -5px; /* Adjust position slightly below padded area */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; /* Allow indicators to size naturally */
+    padding-left: 0;
+    margin-left: 0;
+}
+.carousel-indicators li {
+    background-color: #B0BEC5; /* Lighter grey inactive */
+    border: 1px solid #B0BEC5;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    border-radius: 50%; /* Circular indicators */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+.carousel-indicators .active {
+    background-color: #0A1931; /* Navy active */
+    border-color: #0A1931;
+    width: 12px; /* Slightly larger active */
+    height: 12px;
+}
+
+/* Mobile Carousel Specifics */
+.nyc-carousel-mobile {
+    padding: 0; /* No outer padding */
+    border: none;
+    background: transparent;
+    box-shadow: none; /* Remove shadow if any */
+}
+.nyc-carousel-mobile .item {
+    padding: 0; /* No item padding */
+     min-height: auto;
+}
+.nyc-carousel-mobile .carousel-image {
+    border-radius: 4px 4px 0 0; /* Round top corners */
+    border: 1px solid #E1E5EA; /* Add border */
+    border-bottom: none; /* Remove bottom border */
+}
+.nyc-carousel-mobile .carousel-caption {
+    position: relative; /* Below image */
+    background: #FFFFFF;
+    padding: 15px;
+    border: 1px solid #E1E5EA;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    text-align: center; /* Center caption text */
+}
+.nyc-carousel-mobile .carousel-caption h3 { font-size: 16px; text-align: center;}
+.nyc-carousel-mobile .carousel-caption p { font-size: 13px; margin-bottom: 5px; text-align: center;}
+.nyc-carousel-mobile .carousel-caption p.attribution { margin-top: 10px; text-align: center;}
+
+.nyc-carousel-mobile .carousel-control {
+    width: 35px; height: 35px; line-height: 35px; font-size: 16px;
+    background-color: rgba(10, 25, 49, 0.6); /* Slightly more transparent */
+}
+.nyc-carousel-mobile .carousel-control.left { left: 10px; }
+.nyc-carousel-mobile .carousel-control.right { right: 10px; }
+.nyc-carousel-mobile .carousel-indicators {
+    position: static; /* Below caption */
+    margin-top: 15px;
+    margin-bottom: 0;
+    width: 100%;
+    left: 0;
+    transform: none; /* Reset transform */
+    text-align: center; /* Center indicators */
+}
+
+/* -------------------------------------------------------------------------
+   Footer Styles (#main-footer)
+------------------------------------------------------------------------- */
+#main-footer { /* Corresponds to #footer in CSS */
+    background-color: #F8F9FA; /* Very light grey */
+    color: #555;
+    padding: 50px 0 30px;
+    border-top: 1px solid #E1E5EA;
+    font-size: 13px;
+    line-height: 1.7;
+}
+.footer-col {
+    margin-bottom: 30px;
+}
+.footer-brand {
+    /* text-align: center; Handled by parent .text-center */
+    margin-bottom: 15px; /* Space below logo */
+}
+.footer-logo {
+    display: block;
+    margin: 0 auto 15px; /* Space below logo */
+    max-width: 150px; /* Control logo size */
+    height: auto;
+}
+/* Removed .footer-brand h3 style */
+
+#main-footer h4 {
+    font-family: "adrianna-extended", sans-serif;
+    font-size: 13px;
+    color: #0A1931; /* Navy heading */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E1E5EA; /* Underline heading */
+    display: inline-block; /* Make border fit content */
+}
+#main-footer address {
+    font-style: normal;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+#main-footer address a, #main-footer p a {
+    color: #555;
+    text-decoration: none;
+}
+#main-footer address a:hover, #main-footer p a:hover {
+    color: #C0B08D; /* Champagne hover */
+    text-decoration: underline;
+}
+#main-footer p .fa { margin-right: 8px; width: 1em; text-align: center;} /* Align icons */
+
+#main-footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+#main-footer ul li {
+    margin-bottom: 10px;
+}
+#main-footer ul li a {
+    color: #555;
+    text-decoration: none;
+}
+#main-footer ul li a:hover {
+    color: #C0B08D;
+    text-decoration: underline;
+}
+.social-icons-footer { /* More specific selector */
+    margin-top: 20px;
+}
+.social-icons-footer a {
+    color: #0A1931; /* Navy icons */
+    font-size: 22px;
+    margin: 0 10px; /* Adjust spacing */
+    transition: color 0.3s ease;
+    display: inline-block; /* Ensure proper spacing */
+}
+.social-icons-footer a:hover {
+    color: #C0B08D; /* Champagne hover */
+}
+
+/* Footer Bottom Strip */
+.footer-bottom {
+    background-color: #0A1931; /* Navy background */
+    color: #E1E5EA; /* Light text */
+    padding: 20px 0;
+    font-size: 11px;
+    text-align: center;
+}
+.footer-bottom p {
+    margin: 0 0 5px 0;
+    line-height: 1.5;
+}
+.footer-bottom .privacy-links a {
+    color: #FFFFFF; /* White links */
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+    display: inline-block; /* Prevent awkward wrapping */
+}
+.footer-bottom .privacy-links a:hover {
+    color: #C0B08D; /* Champagne hover */
+    text-decoration: underline;
+}
+.privacy-icon {
+    height: 12px;
+    width: auto;
+    vertical-align: baseline;
+    margin-left: 3px;
+    filter: brightness(0) invert(1); /* Make placeholder icon white */
+}
+
+/* -------------------------------------------------------------------------
+   Utility & WP Styles (Minimal)
+------------------------------------------------------------------------- */
+.clearfix { clear: both; } /* Keep if needed */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Hide elements visually but keep accessible */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Basic WP styles from original (can be removed if not using WP) */
+img.wp-smiley, img.emoji { display: inline !important; border: none !important; box-shadow: none !important; height: 1em !important; width: 1em !important; margin: 0 0.07em !important; vertical-align: -0.1em !important; background: none !important; padding: 0 !important; }
+
+/* -------------------------------------------------------------------------
+   Responsive Adjustments
+------------------------------------------------------------------------- */
+@media (max-width: 991px) { /* Medium devices (tablets, less than 992px) */
+    .navbar-default .navbar-nav > li > a {
+        padding: 20px 12px; /* Reduce padding */
+        font-size: 10px; /* Further reduce font size */
+        letter-spacing: 1px; /* Adjust spacing */
+    }
+     .carousel-caption h3 { font-size: 18px; }
+     .carousel-caption p { font-size: 13px; }
+     .nyc-carousel .carousel-inner .item .row.carousel-row {
+         gap: 20px; /* Reduce gap on smaller desktops */
+     }
+     .footer-col {
+         min-height: 220px; /* Try to balance footer columns on tablets */
+     }
+}
+
+@media (max-width: 767px) { /* Small devices (phones, less than 768px) */
+    body {
+        font-size: 14px; /* Adjust base font size */
+        padding-top: 56px; /* Add padding for fixed mobile navbar (adjust height as needed) */
+    }
+
+    /* Header */
+    #dark-topper { display: none; } /* Hide top bar on mobile */
+    #the-top-fixed-bar { padding: 8px 0; border-bottom: none; } /* Remove border if nav is fixed */
+    #logo img.full-logo { max-height: 40px; }
+    /* Sticky header placeholder needs adjustment */
+    #header-placeholder { height: 81px !important; } /* Approximate height of mobile logo bar + nav toggle bar */
+
+    /* Content */
+    .intro-section { padding: 30px 0; }
+    .intro-section .section-heading { font-size: 24px; }
+    .intro-text, #readMoreContent { font-size: 14px; line-height: 1.7; }
+    .content-section { padding: 40px 0; }
+    .content-divider { margin: 40px auto; }
+    .offer-title, .activity-title { font-size: 15px; min-height: auto; }
+    .offer-content p, .activity-content p { font-size: 13px; }
+    .offer-content, .activity-content { padding: 20px; }
+    .offer-content ul { font-size: 13px; }
+    .button-wrap { padding-top: 15px; }
+    .offer-content .btn, .activity-content .btn { min-width: 140px; padding: 8px 20px; }
+
+    /* Footer */
+    #main-footer { padding: 40px 0 20px; text-align: center; }
+    .footer-col { text-align: center; min-height: 0; } /* Reset min-height */
+    #main-footer h4 {
+        display: inline-block; /* Center heading */
+        border-bottom: none; /* Remove underline on mobile */
+        margin-bottom: 15px;
+    }
+    #main-footer address, #main-footer p { text-align: center; }
+    .social-icons-footer { margin-top: 15px; margin-bottom: 15px; }
+    .footer-bottom { padding: 15px 0; }
+    .footer-bottom p { font-size: 10px; }
+    .footer-bottom .privacy-links { line-height: 1.6; }
+    .footer-bottom .privacy-links a { margin: 0 3px; }
+}

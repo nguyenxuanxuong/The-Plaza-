@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="m1fdjONGW3rxkcppF_mxWA-upMDrDmxJs0NAE6CVG1I"> <!-- Keep existing meta -->
+
+    <!-- SEO Meta -->
+    <title>The Plaza Hotel - NYC Spring Experiences</title> <!-- Slightly refined title -->
+    <!-- Note: CSS uses baskerville-urw and adrianna-extended, likely loaded via Typekit (see script.js). -->
+    <!-- The Google Font links below might be unused for the main styles -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet"> -->
+
+    <meta name="description" content="Experience the magic of Spring in New York City at the iconic Plaza Hotel. Discover exclusive packages, activities, and seasonal events.">
+    <link rel="canonical" href="#"> <!-- Placeholder: Replace with actual URL -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="NYC Spring Experiences at The Plaza Hotel - Offers & Activities">
+    <meta property="og:description" content="Experience the magic of Spring in New York City at the iconic Plaza Hotel. Discover exclusive packages, activities, and seasonal events.">
+    <meta property="og:url" content="#"> <!-- Placeholder: Replace with actual URL -->
+    <meta property="og:site_name" content="The Plaza">
+    <meta property="article:publisher" content="https://www.facebook.com/ThePlazaHotel/"> <!-- External Link -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ThePlazaHotel"> <!-- External Link -->
+
+    <!-- External CSS Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jQuery UI CSS for Datepicker Styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aPx3PGbnrzKRQVcHZhOiMELICTzLkBWIvT+W7ad3ftNqtnlBCBuGbBwDNRnD1fKSJq7npgoQhcvsM9NkxTgZyQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Placeholder for other CSS (Fancybox, etc.) if needed -->
+    <!-- <link rel="stylesheet" href="#"> -->
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- HTML5 Shim and Respond.js for IE8 support -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- Header Desktop -->
+    <header id="main-header" class="hidden-xs">
+        <!-- Note: Original HTML had #newhead > #dark-topper and #the-top-fixed-bar -->
+        <!-- Adapting structure slightly based on provided CSS selectors -->
+        <div id="dark-topper"> <!-- Corresponds to #dark-topper in CSS -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 top-contact-info social-links">
+                        <a href="https://www.facebook.com/theplazahotel" target="_blank" rel="noopener" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/theplazahotel" target="_blank" rel="noopener" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.tripadvisor.com/Hotel_Review-g60763-d675616-Reviews-The_Plaza_New_York-New_York_City_New_York.html" target="_blank" rel="noopener" title="Tripadvisor"><i class="fa fa-tripadvisor"></i></a>
+                        <a href="#" class="accessibility-link">Accessibility</a> <!-- Placeholder -->
+                    </div>
+                    <div class="col-sm-6 text-right top-contact-info contact-details">
+                        <a href="tel:+12127593000" title="Phone Number"><i class="fa fa-phone"></i> (212) PLZ-3000</a>
+                        <a href="mailto:plazareservation@fairmont.com" title="Email Reservations"><i class="fa fa-envelope"></i> plazareservation@fairmont.com</a>
+                        <a href="#" data-toggle="modal" data-target="#booknow" class="booknow-button" title="Book Now">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="the-top-fixed-bar"> <!-- Corresponds to #the-top-fixed-bar in CSS -->
+             <div class="container" id="logo">
+                 <!-- Logos are now controlled via CSS/JS based on scroll -->
+                 <img src="image/logo.png" alt="The Plaza New York Logo - Full" class="full-logo img-responsive">
+                 <img src="image/logo.png" alt="The Plaza New York Logo - Small" class="small-logo img-responsive">
+            </div>
+        </div>
+
+        <div class="jumbotron top-new-nav hidden-xs"> <!-- Corresponds to .top-new-nav in CSS -->
+            <div class="container main-nav-container">
+                <!-- Desktop Navigation -->
+                <nav class="navbar navbar-default main-navigation">
+                    <!-- Removed container fluid and navbar-header as nav is centered -->
+                    <div class="navbar-collapse collapse" id="navbar-desktop">
+                        <ul id="menu-main" class="nav navbar-nav">
+                             <!-- Simplified Menu - Add full menu back if needed -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Explore Rooms & Suites">Rooms & Suites <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://www.theplazany.com/rooms-suites/" title="Rooms & Suites Overview">Overview</a></li>
+                                    <li><a href="https://www.theplazany.com/rooms-suites/guest-rooms/" title="View Guest Rooms">Guest Rooms</a></li>
+                                    <li><a href="https://www.theplazany.com/rooms-suites/junior-and-one-bedroom-suites/" title="View Suites">Suites</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Explore Dining Options">Dining <span class="caret"></span></a>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="https://www.theplazany.com/dining/" title="Dining Overview">Overview</a></li>
+                                    <li><a href="https://www.theplazany.com/dining/the-champagne-bar-nyc/" title="The Champagne Bar">The Champagne Bar</a></li>
+                                    <li><a href="https://www.theplazany.com/dining/the-palm-court/" title="The Palm Court">The Palm Court</a></li>
+                                </ul>
+                            </li>
+                             <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Explore Shops">Shops <span class="caret"></span></a>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="https://www.theplazany.com/shops/" title="Shops at The Plaza">Shops at The Plaza</a></li>
+                                    <li><a href="https://theplazanystore.com/" target="_blank" rel="noopener" title="Visit Online Boutique">Online Boutique</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="https://www.theplazany.com/spa-salon-and-wellness/" class="dropdown-toggle" data-toggle="dropdown" title="WELLNESS">WELLNESS <span class="caret"></span></a>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="https://www.theplazany.com/spa-salon-and-wellness/guerlain-spa-new-york/" title="Shops at The Plaza">Guerlain Spa</a></li>
+                                    <li><a href="https://www.theplazany.com/spa-salon-and-wellness/run-plaza-run/" target="_blank" rel="noopener" title="Visit Online Boutique">Guided Running Tour</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.theplazany.com/meetings-and-celebrations/" title="Events at The Plaza">Events</a></li>
+                            <li class="dropdown">
+                                <a href="https://www.theplazany.com/eloise/" class="dropdown-toggle" data-toggle="dropdown" title="ELOISE">ELOISE <span class="caret"></span></a>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="https://theplazanystore.com/pages/homepage-eloise" target="_blank" rel="noopener" title="Eloise Shop">Eloise Shop</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="https://www.theplazany.com/history/" class="dropdown-toggle" data-toggle="dropdown" title="HISTORY">HISTORY <span class="caret"></span></a>
+                                 <ul class="dropdown-menu">
+                                    <li><a href="https://www.theplazany.com/history/timeline-history-of-the-plaza-hotel/" title="Faces, Films & Moments">Faces, Films & Moments</a></li>
+                                    <li><a href="https://www.theplazany.com/spa-salon-and-wellness/run-plaza-run/" target="_blank" rel="noopener" title="Timeline">Timeline</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active"> <!-- Active State -->
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown" title="View Offers">Offers <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://www.theplazany.com/special-offers/" title="Offers Overview">Offers Overview</a></li>
+                                    <li class="active"><a href="https://www.theplazany.com/spring-happenings/" title="Spring Experiences">Spring Experiences</a></li> <!-- Current Page -->
+                                    <li><a href="https://www.theplazany.com/special-offers/" title="Special Offers">Special Offers</a></li>
+                                </ul>
+                            </li>
+                             <li><a href="https://www.fairmont.com/the-plaza-new-york/" target="_blank" rel="noopener" title="Make a Reservation">Reservations</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header> <!-- /#main-header -->
+
+    <!-- Mobile Header -->
+    <header id="mobile-header" class="visible-xs">
+        <!-- Uses .navbar-mobile in CSS -->
+        <nav class="navbar navbar-default navbar-mobile navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarmobile" aria-expanded="false" aria-controls="navbarmobile">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Mobile Logo can be placed here if needed, currently logo is only in desktop header -->
+                    <!-- <a class="navbar-brand" href="#"><img src="image/logo-mobile.png" alt="The Plaza"></a> -->
+                </div>
+                <div id="navbarmobile" class="navbar-collapse collapse"> <!-- Corresponds to #navbarmobile in CSS -->
+                    <div class="mobile-book-now-container">
+                         <a href="#" title="Book Your Stay" data-toggle="modal" data-target="#booknow" class="btn btn-primary btn-block booknow-button-mobile">Book Now</a>
+                    </div>
+
+                    <ul id="menu-mobile" class="nav navbar-nav">
+                        <!-- Simplified Mobile Menu - Add full menu back if needed -->
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Explore Rooms & Suites">Rooms & Suites <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" title="Rooms & Suites Overview">Overview</a></li>
+                                <li><a href="#" title="View Guest Rooms">Guest Rooms</a></li>
+                                <li><a href="#" title="View Suites">Suites</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Explore Dining Options">Dining <i class="fa fa-angle-down"></i></a>
+                             <ul class="dropdown-menu">
+                                <li><a href="#" title="Dining Overview">Overview</a></li>
+                                <li><a href="#" title="The Champagne Bar">The Champagne Bar</a></li>
+                                <li><a href="#" title="The Palm Court">The Palm Court</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" title="Wellness at The Plaza">Wellness</a></li>
+                        <li><a href="#" title="Events at The Plaza">Events</a></li>
+                         <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="View Offers">Offers <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" title="Offers Overview">Offers Overview</a></li>
+                                <li class="active"><a href="#" title="Spring Experiences">Spring Experiences</a></li>
+                                <li><a href="#" title="Special Offers">Special Offers</a></li>
+                            </ul>
+                        </li>
+                         <li><a href="https://www.fairmont.com/the-plaza-new-york/" target="_blank" rel="noopener" title="Make a Reservation">Reservations</a></li>
+                        <!-- Add other main menu items here -->
+                    </ul>
+
+                    <div class="mobile-contact-info">
+                        <p><a href="tel:+12127593000"><i class="fa fa-phone"></i> (212) PLZ-3000</a></p>
+                        <p><a href="mailto:plazareservation@fairmont.com"><i class="fa fa-envelope"></i> plazareservation@fairmont.com</a></p>
+                        <p><a href="#" class="accessibility-link">Accessibility Information</a></p>
+                        <div class="mobile-social-icons">
+                            <a href="https://www.facebook.com/theplazahotel" target="_blank" rel="noopener" title="Facebook"><i class="fa fa-facebook fa-lg"></i></a>
+                            <a href="https://www.instagram.com/theplazahotel" target="_blank" rel="noopener" title="Instagram"><i class="fa fa-instagram fa-lg"></i></a>
+                            <a href="https://www.tripadvisor.com/Hotel_Review-g60763-d675616-Reviews-The_Plaza_New_York-New_York_City_New_York.html" target="_blank" rel="noopener" title="Tripadvisor"><i class="fa fa-tripadvisor fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Booking Modal -->
+    <div class="modal fade booking-modal" id="booknow" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="Close"><span aria-hidden="true">×</span></button>
+                     <h4 class="modal-title" id="bookNowModalLabel">Book Your Stay</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- Uses .the-reservation in CSS -->
+                    <div class="the-reservation reservation-form">
+                        <form autocomplete="off" action="https://www.fairmont.com/reservations/select-room/" target="_blank" rel="noopener">
+                            <input aria-label="hidden-plaza-value" title="hidden-plaza-value" type="hidden" name="hc" value="PLZ">
+
+                            <!-- Desktop Date Inputs -->
+                            <div class="hidden-xs booking-section">
+                                <label>Check-in / Check-out</label>
+                                <div class="input-group date-group">
+                                    <input aria-label="Check-In Date" title="Check-In Date" type="text" id="txtFromDate" autocomplete="off" name="ad" placeholder="Check-In" class="form-control dateselect-in">
+                                    <span class="input-group-addon date-separator"><i class="fa fa-calendar"></i></span>
+                                    <input aria-label="Check-Out Date" title="Check-Out Date" type="text" id="txtToDate" autocomplete="off" name="dd" placeholder="Check-Out" class="form-control dateselect-out">
+                                </div>
+                            </div>
+
+                            <!-- Mobile Date Inputs -->
+                            <div class="visible-xs booking-section">
+                                 <div class="form-group">
+                                    <label for="txtFromDateMO">Check-In Date</label>
+                                    <input aria-label="Check-In Date" title="Check-In Date" type="text" id="txtFromDateMO" autocomplete="off" name="ad" placeholder="Select Check-In Date" class="form-control dateselect-in-mo" readonly> <!-- Readonly added for better mobile UX with datepicker -->
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtToDateMO">Check-Out Date</label>
+                                    <input aria-label="Check-Out Date" title="Check-Out Date" type="text" id="txtToDateMO" autocomplete="off" name="dd" placeholder="Select Check-Out Date" class="form-control dateselect-out-mo" readonly> <!-- Readonly added -->
+                                </div>
+                            </div>
+
+                            <!-- Adults/Children Dropdown -->
+                            <div class="booking-section guest-selection">
+                                <label>Guests</label>
+                                <!-- Uses .guest-dropdown in CSS -->
+                                <div class="btn-group dropup guest-dropdown">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span id="adultcount_display" class="count-display">2</span> Adults, <span id="childcount_display" class="count-display">0</span> Children
+                                        <i class="fa fa-chevron-down pull-right"></i> <!-- Note: changed from fa-chevron-up as it's a drop*up* -->
+                                    </button>
+                                    <ul class="dropdown-menu guest-dropdown-menu">
+                                        <li class="guest-option">
+                                            <label for="adultcount">Adults</label>
+                                            <div class="qty-selector">
+                                                <span id="adultminus" class="minus"><i class="fa fa-minus"></i></span>
+                                                <input aria-label="Number of Adults" title="Number of Adults" type="number" id="adultcount" class="count adultcount" name="na" value="2" min="1">
+                                                <span id="adultplus" class="plus"><i class="fa fa-plus"></i></span>
+                                            </div>
+                                        </li>
+                                        <li class="guest-option">
+                                            <label for="childcount">Children</label>
+                                            <div class="qty-selector">
+                                                <span id="ccminus" class="minus"><i class="fa fa-minus"></i></span>
+                                                <input aria-label="Number of Children" title="Number of Children" type="number" id="childcount" class="count childcount" name="nc" value="0" min="0">
+                                                <span id="ccplus" class="plus"><i class="fa fa-plus"></i></span>
+                                            </div>
+                                        </li>
+                                        <li class="guest-apply">
+                                            <a href="#" title="Apply Selections" class="closeadultnum btn btn-primary btn-sm">Apply</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="booking-section text-center">
+                                <button aria-label="Check Availability" title="Check Availability" type="submit" class="btn btn-primary btn-lg btn-block submit-reservation-btn">Check Availability</button>
+                            </div>
+                         </form>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+         <!-- Hero Section -->
+         <section class="hero-section text-center">
+             <!-- Removed container around image as it's full width -->
+             <img src="image/Screenshot 2025-04-15 104720.png" alt="Spring flowers framing The Plaza Hotel entrance" class="hero-image img-responsive">
+             <div class="container">
+                 <!-- Logo moved from original #logo to here for semantic placement -->
+                 <!-- <img src="image/logo.png" alt="The Plaza New York Logo" class="hero-logo"> --> <!-- Original had logo here, but also in header -->
+                 <h1 class="page-title adorn">The Plaza New York</h1>
+             </div>
+         </section>
+
+         <!-- Introduction Section -->
+        <section class="intro-section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <!-- Changed h3 to h2 for better semantic hierarchy -->
+                        <h2 class="section-heading">Experience New York's Iconic Luxury Hotel on Central Park South</h2>
+                        <p class="intro-text">Since its debut in 1907, The Plaza Hotel has remained a New York icon. Situated on Fifth Avenue, its prestigious address continues to define elegance with unmatched service and an ever-evolving modern sensibility. Experience the magic this spring.</p>
+                         <!-- Collapsible Read More Section -->
+                        <div id="readMoreContent" class="collapse">
+                            <p>From feast to fete, The Plaza’s extraordinary portfolio of refined experiences is enjoyed by all who pass through the iconic revolving door. Revel in the magic of Afternoon Tea in The Palm Court, savor the sights in the elegant Champagne Bar, and discover our luxurious guestrooms and suites.</p>
+                            <p>Unrivaled luxury and comfort are complemented by attentive and discreet service throughout all areas of the hotel. Explore world-class shopping, indulge at Guerlain Spa, or maintain your routine at The Plaza Hotel Fitness Center.</p>
+                            <p>The opulent Grand Ballroom and Terrace Room, meticulously restored, continue to host many of New York City’s most memorable moments, which are at the heart of The Plaza’s legacy.</p>
+                        </div>
+                        <a class="btn btn-link read-more-link" data-toggle="collapse" href="#readMoreContent" aria-expanded="false" aria-controls="readMoreContent" title="Read More about The Plaza">
+                            <span class="text-when-collapsed">Read More <i class="fa fa-angle-down"></i></span>
+                            <span class="text-when-expanded">Read Less <i class="fa fa-angle-up"></i></span>
+                        </a>
+                    </div>
+                </div>
+                 <div class="content-divider"></div> <!-- Divider moved inside container -->
+            </div>
+        </section>
+
+        <!-- Section: Plaza Offerings -->
+        <section id="plaza-offerings" class="content-section">
+             <div class="container">
+                <a id="section-offers" class="scroll-anchor" aria-hidden="true"></a> <!-- Anchor -->
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h2 class="section-title adorn">Seasonal Plaza Offers</h2>
+                    </div>
+                </div>
+                <div class="row offer-grid">
+                    <!-- Offer 1 -->
+                    <div class="col-md-6 offer-item">
+                        <div class="offer-box">
+                            <img src="image/1.png" alt="Orchids display at The Plaza" class="img-responsive offer-image">
+                            <div class="offer-content">
+                                <h3 class="offer-title">Exclusive Orchid Show Experience</h3>
+                                <p>Immerse yourself in the awe-inspiring displays of The Orchid Show at The New York Botanical Garden with this exclusive package.</p>
+                                <ul>
+                                    <li>Two-night stay at The Plaza</li>
+                                    <li>Two tickets to The Orchid Show</li>
+                                    <li>Private NYBG golf cart tour</li>
+                                    <li>Orchid-Themed Afternoon Tea</li>
+                                </ul>
+                                <p><small>Book Mar 17 - Apr 19, 2025 for stays Mar 24 - Apr 26. 7-day advance booking required. Subject to availability.</small></p>
+                                <!-- Button wrap ensures consistent spacing -->
+                                <div class="button-wrap text-center">
+                                    <a href="#" title="Reserve Orchid Experience Package" target="_blank" rel="noopener" class="btn btn-primary">Reserve Package</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer 2 -->
+                    <div class="col-md-6 offer-item">
+                        <div class="offer-box">
+                            <img src="image/3.png" alt="View of The Plaza Hotel exterior" class="img-responsive offer-image">
+                            <div class="offer-content">
+                                <h3 class="offer-title">Run, Plaza, Run! Guided Tour</h3>
+                                <p>Explore the beauty of Central Park with our guided running tour. Experience iconic landmarks and enjoy the fresh spring air while staying active.</p>
+                                <p>Tailored for all levels. Book your invigorating run through the concierge.</p>
+                                <div class="button-wrap text-center">
+                                    <a href="#" title="Learn More About Guided Running Tour" target="_blank" rel="noopener" class="btn btn-primary">Learn More</a> <!-- Placeholder link -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix visible-md visible-lg"></div> <!-- Clearfix for desktop -->
+
+                    <!-- Offer 3 -->
+                     <div class="col-md-6 offer-item">
+                        <div class="offer-box">
+                            <img src="image/2.png" alt="Conde Nast Traveler Readers' Choice Awards Logo" class="img-responsive offer-image">
+                            <div class="offer-content">
+                                <h3 class="offer-title">Vote: Condé Nast Traveler Awards</h3>
+                                 <p>The Plaza is honored to be nominated in the 2025 Condé Nast Traveler Readers’ Choice Awards. Share your favorite Plaza memories by casting your vote!</p>
+                                <p>Your support helps us continue our legacy of excellence.</p>
+                                <div class="button-wrap text-center">
+                                    <a href="https://www.cntraveler.com/story/vote-readers-choice-awards" title="Vote for The Plaza on Condé Nast Traveler" target="_blank" rel="noopener" class="btn btn-primary">Cast Your Vote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer 4 -->
+                     <div class="col-md-6 offer-item">
+                        <div class="offer-box">
+                            <img src="image/4.png" alt="Couple enjoying view from a Plaza suite window" class="img-responsive offer-image">
+                            <div class="offer-content">
+                                <h3 class="offer-title">Endless Memories: Spring Savings</h3>
+                                <p>Create unforgettable moments this spring. Reserve your luxury stay at The Plaza and enjoy savings of up to 20% off our best flexible rates.</p>
+                                <p>Experience the magic of NYC from the city's most iconic address.</p>
+                                <div class="button-wrap text-center">
+                                     <a href="#" title="Reserve Your Spring Stay" target="_blank" rel="noopener" class="btn btn-primary">Reserve Now</a> <!-- Placeholder -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix visible-md visible-lg"></div>
+
+                     <!-- Offer 5 -->
+                    <div class="col-md-6 offer-item">
+                        <div class="offer-box">
+                            <img src="image/5.png" alt="Champagne glasses and roses arrangement" class="img-responsive offer-image">
+                            <div class="offer-content">
+                                <h3 class="offer-title">With Love From The Plaza</h3>
+                                <p>Rekindle romance with an enchanting getaway. Enjoy champagne, a romantic welcome amenity, a private meal adorned with rose petals, and more.</p>
+                                <p>Indulge in a special experience designed for two.</p>
+                                <div class="button-wrap text-center">
+                                     <a href="#" title="Reserve With Love From The Plaza Package" target="_blank" rel="noopener" class="btn btn-primary">Reserve Romance</a> <!-- Placeholder -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Offer 6 -->
+                    <div class="col-md-6 offer-item">
+                        <div class="offer-box">
+                            <img src="image/6.png" alt="Travel + Leisure World's Best Awards Logo" class="img-responsive offer-image">
+                            <div class="offer-content">
+                               <h3 class="offer-title">Vote: Travel + Leisure World's Best</h3>
+                                <p>Share your love for The Plaza! We're nominated for the Travel + Leisure 2025 World's Best Awards. Your vote celebrates the experiences we cherish creating.</p>
+                                <p>Help us achieve this prestigious recognition.</p>
+                                <div class="button-wrap text-center">
+                                    <a href="https://wba.m-rr.com/home" title="Vote for The Plaza on Travel + Leisure" target="_blank" rel="noopener" class="btn btn-primary">Vote Now</a> <!-- Example link -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End row -->
+                 <div class="content-divider"></div>
+             </div> <!-- End Container -->
+        </section>
+
+         <!-- Section: Activities -->
+        <section id="plaza-activities" class="content-section">
+            <div class="container">
+                <a id="section-activities" class="scroll-anchor" aria-hidden="true"></a> <!-- Anchor -->
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h2 class="section-title adorn">Activities at The Plaza</h2>
+                    </div>
+                </div>
+                <div class="row activity-grid">
+                    <!-- Activity 1 -->
+                    <div class="col-md-6 activity-item">
+                       <div class="activity-box">
+                            <img alt="Serene treatment room at Guerlain Spa" src="image/7.png" class="img-responsive activity-image">
+                            <div class="activity-content">
+                                <h3 class="activity-title">Indulge at Guerlain Spa</h3>
+                                <p>Prioritize your well-being with a day of luxury pampering at the renowned Guerlain Spa. Experience pure relaxation and rejuvenation within The Plaza.</p>
+                                <div class="button-wrap text-center">
+                                    <a href="#" target="_blank" rel="noopener" class="btn btn-primary" title="Book Spa Appointment">Book Appointment</a> <!-- Placeholder -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity 2 -->
+                    <div class="col-md-6 activity-item">
+                        <div class="activity-box">
+                            <img alt="Illustrated Plaza Passport cover for children" src="image/8.png" class="img-responsive activity-image">
+                            <div class="activity-content">
+                                <h3 class="activity-title">Children’s Check-In Program</h3>
+                                <p>Young guests receive their own Plaza Passport upon check-in, filled with charming illustrations, inviting them on a magical exploration of our hotel.</p>
+                                <div class="button-wrap text-center">
+                                    <a href="#" title="Reserve Your Family Stay" class="btn btn-primary" target="_blank" rel="noopener">Reserve Family Stay</a> <!-- Placeholder -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="clearfix visible-md visible-lg"></div>
+
+                     <!-- Activity 3 -->
+                    <div class="col-md-6 activity-item">
+                       <div class="activity-box">
+                            <img alt="Modern fitness equipment at The Plaza Fitness Center" src="image/9.png" class="img-responsive activity-image">
+                           <div class="activity-content">
+                                <h3 class="activity-title">Elevate Your Fitness</h3>
+                                <p>Maintain your routine or start anew in our thoughtfully designed fitness center. Energize your body and mind during your stay.</p>
+                                <div class="button-wrap text-center">
+                                    <a href="#" title="Explore Wellness Facilities" class="btn btn-primary" target="_blank" rel="noopener">Explore Wellness</a> <!-- Placeholder -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity 4 -->
+                    <div class="col-md-6 activity-item">
+                         <div class="activity-box">
+                            <img alt="Elegant Afternoon Tea setting at The Palm Court" src="image/10.png" class="img-responsive activity-image">
+                            <div class="activity-content">
+                                <h3 class="activity-title">Dining at The Palm Court</h3>
+                                <p>Delight in the timeless tradition of Afternoon Tea, featuring curated selections including vegan, vegetarian, and gluten-free options for an inclusive culinary experience.</p>
+                                <div class="button-wrap text-center">
+                                    <a href="#" title="Discover Dining at The Palm Court" class="btn btn-primary" target="_blank" rel="noopener">Discover Palm Court</a> <!-- Placeholder -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End row -->
+                 <div class="content-divider"></div>
+            </div> <!-- End Container -->
+        </section>
+
+        <!-- Section: Spring Activities in NYC -->
+        <section id="nyc-activities" class="content-section nyc-section">
+             <div class="container">
+                <a id="section-nyc" class="scroll-anchor" aria-hidden="true"></a> <!-- Anchor -->
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                         <h2 class="section-title adorn">Explore Springtime NYC</h2>
+                    </div>
+                </div>
+
+                <!-- Desktop Carousel -->
+                <div class="hidden-xs">
+                     <div id="nycCarouselDesktop" class="carousel slide nyc-carousel" data-ride="carousel" data-interval="7000">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#nycCarouselDesktop" data-slide-to="0" class="active"></li>
+                            <li data-target="#nycCarouselDesktop" data-slide-to="1"></li>
+                            <li data-target="#nycCarouselDesktop" data-slide-to="2"></li>
+                            <li data-target="#nycCarouselDesktop" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <!-- Item 1 -->
+                            <div class="item active">
+                                <!-- Uses .carousel-row in CSS -->
+                                <div class="row carousel-row">
+                                    <div class="col-sm-5 carousel-image-col">
+                                        <img alt="Christo and Jeanne-Claude's The Gates installation in Central Park" src="image/11.png" class="img-responsive carousel-image">
+                                    </div>
+                                    <div class="col-sm-7 carousel-caption-col">
+                                        <!-- uses .carousel-caption-content in CSS -->
+                                        <div class="carousel-caption carousel-caption-content">
+                                            <h3>The Gates: 20th Anniversary</h3>
+                                            <p>Relive the magic of Christo and Jeanne-Claude's iconic Central Park installation. Explore a special exhibition at The Shed and an AR re-creation in the park (through Apr 16th).</p>
+                                            <p class="attribution"><small><em>Photo: Wolfgang Volz | Christo and Jeanne-Claude Foundation</em></small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="item">
+                                 <div class="row carousel-row">
+                                    <div class="col-sm-5 carousel-image-col">
+                                         <img alt="Vibrant orchids at the New York Botanical Garden Orchid Show" src="image/12.png" class="img-responsive carousel-image">
+                                    </div>
+                                    <div class="col-sm-7 carousel-caption-col">
+                                        <div class="carousel-caption carousel-caption-content">
+                                            <h3>NYBG Orchid Show</h3>
+                                            <p>Immerse yourself in Mexican Modernism-inspired floral designs at the NYBG's stunning Orchid Show (Feb 15 - Apr 27, 2025). A vibrant spring escape!</p>
+                                             <p class="attribution"><small><em>Photo: Brittany Petronella | NYC Tourism + Conventions</em></small></p>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="item">
+                                <div class="row carousel-row">
+                                    <div class="col-sm-5 carousel-image-col">
+                                        <img alt="Manhattanhenge sunset aligning with NYC streets" src="image/13.png" class="img-responsive carousel-image">
+                                    </div>
+                                    <div class="col-sm-7 carousel-caption-col">
+                                        <div class="carousel-caption carousel-caption-content">
+                                            <h3>Experience Manhattanhenge</h3>
+                                            <p>Witness the breathtaking phenomenon where the setting sun aligns perfectly with Manhattan's street grid. A truly unique NYC photo opportunity this spring.</p>
+                                            <p class="attribution"><small><em>Photo: Julienne Schaer | NYC Tourism + Conventions</em></small></p> <!-- Completed attribution -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="item">
+                                 <div class="row carousel-row">
+                                    <div class="col-sm-5 carousel-image-col">
+                                        <img alt="Grand interior hall of The Metropolitan Museum of Art" src="image/14.png" class="img-responsive carousel-image">
+                                    </div>
+                                    <div class="col-sm-7 carousel-caption-col">
+                                        <div class="carousel-caption carousel-caption-content">
+                                            <h3>Spring Exhibitions at The Met</h3>
+                                            <p>Explore world-class art just moments from The Plaza. Don't miss exhibitions like "Caspar David Friedrich" (through May 11th) and many more.</p>
+                                             <p class="attribution"><small><em>Photo: Alamy Stock Photo</em></small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#nycCarouselDesktop" role="button" data-slide="prev">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#nycCarouselDesktop" role="button" data-slide="next">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                 <!-- Mobile Carousel -->
+                <div class="visible-xs">
+                     <div id="nycCarouselMobile" class="carousel slide nyc-carousel-mobile" data-ride="carousel" data-interval="7000">
+                         <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#nycCarouselMobile" data-slide-to="0" class="active"></li>
+                            <li data-target="#nycCarouselMobile" data-slide-to="1"></li>
+                            <li data-target="#nycCarouselMobile" data-slide-to="2"></li>
+                            <li data-target="#nycCarouselMobile" data-slide-to="3"></li>
+                        </ol>
+
+                         <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <!-- Item 1 -->
+                            <div class="item active">
+                                 <img alt="Christo and Jeanne-Claude's The Gates installation in Central Park" src="image/11.png" class="img-responsive carousel-image">
+                                <div class="carousel-caption">
+                                    <h3>The Gates: 20 Years</h3>
+                                    <p>Explore the legacy of this iconic Central Park installation via exhibitions and AR.</p>
+                                     <p class="attribution"><small><em>Photo: W. Volz | C J-C Foundation</em></small></p>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                             <div class="item">
+                                 <img alt="Vibrant orchids at the New York Botanical Garden Orchid Show" src="image/12.png" class="img-responsive carousel-image">
+                                <div class="carousel-caption">
+                                    <h3>NYBG Orchid Show</h3>
+                                    <p>Discover Mexican Modernism through vibrant floral designs at the NYBG.</p>
+                                     <p class="attribution"><small><em>Photo: B. Petronella | NYC Tourism</em></small></p>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="item">
+                                <img alt="Manhattanhenge sunset aligning with NYC streets" src="image/13.png" class="img-responsive carousel-image">
+                                <div class="carousel-caption">
+                                    <h3>Manhattanhenge</h3>
+                                    <p>Catch the stunning sunset alignment along Manhattan's streets – a perfect photo op.</p>
+                                    <p class="attribution"><small><em>Photo: J. Schaer | NYC Tourism</em></small></p>
+                                </div>
+                            </div>
+                             <!-- Item 4 -->
+                            <div class="item">
+                                 <img alt="Grand interior hall of The Metropolitan Museum of Art" src="image/14.png" class="img-responsive carousel-image">
+                                <div class="carousel-caption">
+                                    <h3>Exhibitions at The Met</h3>
+                                    <p>Visit The Met for captivating spring art, including Caspar David Friedrich.</p>
+                                     <p class="attribution"><small><em>Photo: Alamy</em></small></p>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Controls -->
+                        <a class="left carousel-control" href="#nycCarouselMobile" role="button" data-slide="prev">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#nycCarouselMobile" role="button" data-slide="next">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div> <!-- End Container -->
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer"> <!-- Uses #footer in CSS -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 footer-col footer-logo-area text-center"> <!-- Added text-center for mobile -->
+                    <div class="footer-brand">
+                        <img src="image/logo.png" class="footer-logo img-responsive" alt="The Plaza New York - Footer Logo">
+                        <!-- Removed h4 as it's redundant with logo alt -->
+                      </div>
+
+                     <div class="social-icons social-icons-footer"> <!-- Use specific class if needed -->
+                        <a title="Instagram" href="https://www.instagram.com/theplazahotel/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a>
+                        <a title="Facebook" href="https://www.facebook.com/ThePlazaHotel/" target="_blank" rel="noopener"><i class="fa fa-facebook-square"></i></a>
+                        <a title="Tripadvisor" href="https://www.tripadvisor.com/Hotel_Review-g60763-d675616-Reviews-The_Plaza_New_York-New_York_City_New_York.html" target="_blank" rel="noopener"><i class="fa fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <a target="_blank" rel="noopener" href="https://maps.google.com/maps?q=The+Plaza+NY" title="View The Plaza on Google Maps">
+                            768 Fifth Avenue<br>
+                            New York, NY 10019
+                        </a>
+                    </address>
+                    <p>
+                        <a href="tel:+12127593000" title="Main Phone"><i class="fa fa-phone"></i> (212) 759-3000</a><br>
+                        <a href="tel:+18888500909" title="Reservations Toll Free"><i class="fa fa-mobile"></i> (888) 850-0909</a><br> <!-- Consider fa-phone-square or similar if fa-mobile looks odd -->
+                        <a href="mailto:plazareservation@fairmont.com" title="Email Reservations"><i class="fa fa-envelope"></i> plazareservation@fairmont.com</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h4>Explore The Plaza</h4>
+                    <ul>
+                        <li><a title="Special Offers" href="#">Special Offers</a></li>
+                        <li><a title="Rooms & Suites" href="#">Rooms & Suites</a></li>
+                         <li><a title="Dining" href="#">Dining</a></li>
+                         <li><a title="Wellness" href="#">Wellness</a></li>
+                        <li><a title="Meetings & Events" href="#">Meetings & Events</a></li>
+                         <li><a title="Online Boutique" href="https://theplazanystore.com/" target="_blank" rel="noopener">Online Boutique</a></li>
+                         <li><a title="Accessibility Information" href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-col">
+                    <h4>More</h4>
+                     <ul>
+                        <li><a title="Location Map" href="#">Location Map</a></li>
+                        <li><a title="Press Room" href="#">Press Room</a></li>
+                        <li><a title="Careers at Accor" href="https://careers.accor.com/global/en" target="_blank" rel="noopener">Careers</a></li>
+                         <li><a title="About Fairmont Hotels" href="https://www.fairmont.com/" target="_blank" rel="noopener">About Fairmont</a></li>
+                         <li><a title="Join Our Newsletter" href="https://www.fairmont.com/promo/signup/index.html?prop=PLZ" target="_blank" rel="noopener">Join Newsletter</a></li>
+                        <li><a title="Guest Information" href="#">Guest Information</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <!-- Updated span id for JS hook -->
+                    <p>© <span id="current-year">2024</span> Plaza LLC (USA) — All Rights Reserved</p>
+                    <p class="privacy-links">
+                       <a href="#">Privacy Policy</a> |
+                       <a href="#">California Collection Notice</a> |
+                       <a href="#">Your Privacy Choices <img decoding="async" src="placeholder-ccpa-icon.png" alt="CCPA Opt-Out Icon" class="privacy-icon"></a> | <!-- Placeholder -->
+                       <a href="#">Cookie Policy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript Libraries (jQuery MUST come first) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- jQuery UI (for Datepicker) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcZnRNfmgtyW87Lz+eBqSJ5MDFSsdsuxEkU4UfM79wXFPUC/ISKLrHKQNqRrN8HmAEDcPzA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Add other necessary external JS links here (e.g., Fancybox, Adobe Typekit) -->
+    <!-- <script src="https://use.typekit.net/xxxxxxx.js"></script> --> <!-- Example Typekit -->
+    <!-- <script src="#"></script> -->
+
+    <!-- Your Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
